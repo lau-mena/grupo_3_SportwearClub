@@ -33,6 +33,39 @@ let controller = {
         let html = readHTML('productAdd');
         res.send(html);
         },
+    FAQ : (req, res) => {
+            let html = readHTML('FAQ');
+            res.send(html);
+            },
+    Nosotros : (req, res) => {
+                let html = readHTML('Nosotros');
+                res.send(html);
+                },
+     Hombre : (req, res) => {
+             let html = readHTML('Hombre');
+             res.send(html);
+                    },
+     Mujer : (req, res) => {
+            let html = readHTML('Mujer');
+            res.send(html);
+                        },         
+     Nenes: (req, res) => {
+             let html = readHTML('Nenes');
+            res.send(html);
+                   },       
+    Lonuevo: (req, res) => {
+            let html = readHTML('Lonuevo');
+            res.send(html);
+                          },   
+    Sale: (req, res) => {
+            let html = readHTML('Sale');
+            res.send(html);
+                     },           
+    login : (req, res) => {
+            let html = readHTML('login');
+            res.send(html);
+                       },
+                
     
 };
 
