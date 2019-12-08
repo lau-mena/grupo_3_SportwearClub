@@ -1,19 +1,115 @@
 body {
-  padding: 50px;
+  padding: 2%;
   font-family: 'Prompt', sans-serif;
-  background-color: #17004d;
+  background-color:white;
   }
 
 *{
   box-sizing: border-box;
-  color: white
+  color: black
 }
+/* Tablet*/
+@media(min-width:767px){
+
+  header{
+  overflow: hidden;
+  }
+  .envio{
+  width: 75%;
+   }
+  .logo img{
+  width: 75%;
+  height: 90%;
+ }
+
+
+  .busqueda,
+  .login{
+   position: absolute;
+   right: 10px;
+   margin-top: 15px;
+   width: 50%;
+  
+  }
+  .links{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  height:70%
+  }
+
+  .redes, .pagos, .company, .help{
+    font-size: x-large
+  }
+ }
+
+
+
+@media(min-width:1000px){
+
+  .links{
+    object-position: center;
+    flex-grow: 1;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    height:70%
+    }
+
+    .busqueda{
+      float: inline-end;
+
+    }
+    .login{
+     position: absolute;
+     right: 10px;
+     margin-top: 15px;
+     width: 50%;
+    
+    }
+
+  footer{
+    font-size: xx-large
+  }
+  .boton {
+      
+    display: inline-block;
+    border-radius: 4px;
+    background-color:rgb(0, 68, 255);
+    border: none;
+    color: rgb(14, 13, 13);
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+    width: 150px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    flex-wrap: wrap;
+    justify-items: right;
+
+  }
+
+
+
+
+}
+
+
+
 
 /*Header*/
 
-ul,
-ol{ 
- 
+ul{ 
+    list-style-type: none;
     list-style:none;
     padding:0;
     margin:0;
@@ -22,10 +118,13 @@ ol{
 .envio{
    display:flex;
    flex-wrap: wrap;
-   border:solid rgb(49, 3, 253) 2px;
+   border:solid rgb(253, 20, 3) 2px;
+   font-size: smaller;
    justify-content:  center;
-   margin:20px;
-   color:rgb(249, 249, 250)
+   margin:7%;
+   color:rgb(240, 3, 3);
+   width:95%;
+  
       }
 
 .container{
@@ -33,36 +132,55 @@ ol{
   flex-wrap: wrap;
   margin:auto;
   justify-content: space-between;
-  align-self:center
+  align-self:center;
+  width:95%;
 }
 
 .logo{
-size: 30px;
+size: 5%;
 display: flex;
-align-items: left;
+align-items: left;}
 
+.logo img{
+  width: 50%;
+  height: 80%;
+ 
 }
 
 .busqueda{
   display:flex;
   flex-wrap: wrap;
-  justify-content: space-around
+  justify-content: space-around;
+  float: left;
+  width:40%;
+  align-content: center;
+
+  }
+
+form input[type="search"]{
+width: 80%;
   }
 
 .login{
+ float: left;
  margin-top: 15px;
- justify-content:center;
+ align-items: flex-end;
+ width: 50%;
 }
 
 
-.enlaces {
-    display:flex;
-    flex-wrap: wrap;
-    float: left;
-    align-self: auto;
-   
+.links {
+  height: 50%;
+  display:flex;
+  flex-grow: 1;
+  justify-content: space-between;
+  margin-top: 10%;
+  align-content: center;
+  list-style: none;
+  float: left;
 
     
+      
 }
 
 /*Footer*/
@@ -70,20 +188,42 @@ align-items: left;
 .pie{
   display:flex;
   flex-wrap: wrap;
-  width: 1140px;
+  width: 95%;
   margin:auto;
   margin-top: 5%;
+  justify-content: space-between;
+
  
   
 }
+.redes{ 
+  display:flex;
+  flex-wrap: wrap;
+  width:15%;
+  justify-content:space-around
+}
 
-  .RS, .pagos, .company, .help {
-    display:flex;
-    flex-wrap: wrap;
-    flex-grow: 1;
-    justify-content: space-around;
-    color: black;
-    }
+.help{ 
+  display:flex;
+  flex-wrap: wrap;
+  width:15%;
+  justify-content:space-around;
+  font-size: x-small;
+}
+.pagos{ 
+  display:flex;
+  flex-wrap: wrap;
+  width:20%;
+  justify-content:space-around;
+  
+}
+.company{ 
+  display:flex;
+  flex-wrap: wrap;
+  width:15%;
+  justify-content:space-around;
+  font-size:x-small ;
+}
 
 
     /* REGISTRO*/
@@ -120,13 +260,13 @@ align-items: left;
       
         display: inline-block;
         border-radius: 4px;
-        background-color:rgb(0, 68, 255);
+        background-color:rgb(21, 22, 22);
         border: none;
-        color: rgb(14, 13, 13);
+        color: white;
         text-align: center;
-        font-size: 20px;
-        padding: 10px;
-        width: 150px;
+        font-size: 12px;
+        padding: 7px;
+        width: 80px;
         transition: all 0.5s;
         cursor: pointer;
         margin: 5px;
@@ -143,15 +283,17 @@ align-items: left;
         margin-top: 5%;
         margin-bottom: 3%;
         text-decoration: white;
-        font-size:25px;
+        font-size:80%;
       }
       .question{
         margin-left: 5%;
         margin-right: 5%;
+        font-size:75%;
       }
       .answer{
         margin-left: 8%;
         margin-right: 5%;
         margin-bottom: 2%;
         text-align: justify;
+        font-size:75%;
       }
