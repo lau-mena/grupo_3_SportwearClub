@@ -17,9 +17,9 @@ body {
   .envio{
   width: 75%;
    }
-  .logo img{
-  width: 75%;
-  height: 90%;
+  .img{
+  width: 80%;
+  height: 100%;
  }
 
 
@@ -50,7 +50,13 @@ body {
 
 
 @media(min-width:1000px){
-
+  .envio{
+    width: 75%;
+     }
+    .logo{
+    width: 50%;
+    height: 50%;
+   }
   .links{
     object-position: center;
     flex-grow: 1;
