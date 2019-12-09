@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel='stylesheet' href='/stylesheets/style.css'>
+    <link href="https://fonts.googleapis.com/css?family=Prompt&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <title>SportwearClub</title>
+    
+</head>
+<body>
+   
+    
+   <header>
+
+      <div class="envio">ENVIO SIN CARGO EN TU COMPRA SUPERIOR A $1999 + 3 CUOTAS SIN INTERES</div>
+  
+     <div class ="container">
+        
+      
+        <div class="logo">
+           <img src= "../images/SportswearClubLogo.jpeg" alt="logo">
+         </div>
+        
+  
+         <ul class="login">
+           <li class="login1"><a href="/login"><i class="fas fa-user"></i> Log in</a></li>
+           <li><a href="/register"><i class="far fa-paper-plane"></i> Registrate</a></li>
+        </ul>
+  
+  
+         <nav class="busqueda">
+   
+           <form role="search">
+               <label>
+                  <input type="search" />
+              </label>
+               <buton type="submit"><i class="fas fa-search"></i></button>
+           </form>
+           
+         </nav> 
+  
+  
+  
+  
+       <div class="links">
+        <ul class="enlaces"></ul>
+        <li><a href="/Hombre"><i class="fas fa-medal"></i>Hombre </a></li>
+        <li><a href="/Mujer"><i class="fas fa-medal"></i>Mujer</a></li>
+        <li><a href="/Nenes"><i class="fas fa-medal"></i>Niños</a></li>
+        <li><a href="/Lonuevo"><i class="fas fa-medal"></i>Nuevo</a></li>
+        <li><a href="/Sale"><i class="fas fa-medal"></i>Sale!</a></li>
+         </ul>
+       </div>
+          
+         
+     </div>
+     </header>
+
+<section>
+
+        <h1 class="titular">REGISTRATE</h1>
+
+    <div class="registro">
+   
+   
+    <form action="validar.php" method="POST">
+
+       <p>
+         <label for="nombre">Nombre: </label> 
+         <input type="text" name="nombre" id="nombre"> 
+      </p>
+
+      <p>
+        <label for="apellido">Apellido: </label> 
+        <input type="text" name="apellido" id="apellido"> 
+      </p>
+
+      <p>
+        <label for="nacimiento">Fecha de nacimiento: </label> 
+        <input type="date" name="nacimiento" id="nacimiento"> 
+      </p>
+    
+      <p>
+            <label for="pais">Pais de residencia: </label> 
+           <select name="pais">
+                <option value="AR"> Argentina</option>
+                <option value="BO">Bolivia</option>
+                <option value="BR">Brasil</option>
+                <option value="CL">Chile</option>
+                <option value="Colombia">Colombia</option>
+                <option value="EC">Ecuador</option>
+                <option value="MX">Mexico</option>
+                <option value="PY"> Paraguay</option>
+                <option value="UY"> Uruguay</option>
+                <option value="VZ">Venezuela</option>
+                <option value ="OTH">Otros</option>
+           </select> 
+      </p>
+
+      <p>
+            <label for="ciudad">Ciudad de residencia: </label> 
+            <input type="text" name="ciudad" id="ciudad"> 
+    </p>
+
+    <p>
+            <label for="mail">Correo electronico: </label> 
+            <input type="email" name="mail" id="mail"> 
+    </p>
+
+    <p>
+            <label for="pass">Contraseña: </label> 
+            <input type="password" name="pass" id="pass"> 
+    </p>
+
+    <p>
+            <input type="checkbox" name="cond" id="cond">
+            <label for="cond"> He leido y acepto los terminos y condiciones </label> 
+            
+    </p>
+
+    <p>
+            <input type="checkbox" name="news" id="news">
+            <label for="news"> Me gustaria recibir el newsletter con las novedades de SportwearClub </label> 
+            
+    </p>
+
+
+    <button type="submit" class="boton">Enviar</button>
+    <button type="reset" class="boton">Cancelar</button>
+
+    </form>
+
+
+    </div>
+
+</section>
+
+
+
+
+ <footer>
+
+   <div class="pie">
+
+      
+         
+         <div class="redes"style="font-size: 18px">
+            <a href="https://www.facebook.com"> <i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com"> <i class="fab fa-instagram"></i></a>
+       </div>
+
+      <div class="pagos">
+                  
+         <div class="metodos"style="font-size: 18px";>
+            
+            <i class="fab fa-cc-visa"></i>
+            <i class="fab fa-cc-mastercard"></i>
+            <i class="fab fa-cc-amex"></i>
+            <i class="fab fa-handshake-alt"></i>
+        
+         </div>  
+      </div>
+
+       <div class="company">
+          <ul>
+              <a href="./Nosotros">COMPAÑIA</a>
+                  <li>Quienes somos</li>
+                  <li>Sucursales</li>
+                  <li>Trabaja con nosotros</li>
+            </ul>
+      </div>
+
+       <div class="help">
+          <ul>
+                <a href="./FAQ">PREGUNTAS FRECUENTES</a>
+                  <li>Pagos</li>
+                  <li>Envios</li>
+                  <li>Devolucion</li>
+      </div>
+   
+
+</footer>
+
+</body>
+</html>
