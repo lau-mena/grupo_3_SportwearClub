@@ -10,37 +10,12 @@ body {
 }
 /* Tablet*/
 @media(min-width:767px){
-
-  header{
-  overflow: hidden;
+  .alert{
+    text-align: center;
+    border:solid rgb(14, 13, 13) 3px;
+    font-size: medium;
   }
-  .envio{
-  width: 75%;
-   }
-  .img{
-  width: 80%;
-  height: 100%;
- }
-
-
-  .busqueda,
-  .login{
-   position: absolute;
-   right: 10px;
-   margin-top: 15px;
-   width: 50%;
   
-  }
-  .links{
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: center;
-  margin-left: 10%;
-  margin-right: 10%;
-  height:70%
-  }
 
   .redes, .pagos, .company, .help{
     font-size: x-large
@@ -48,32 +23,14 @@ body {
  }
 
 
-
 @media(min-width:1000px){
-  .envio{
-    width: 75%;
-     }
-    .logo{
-    width: 50%;
-    height: 50%;
-   }
-  .links{
-    object-position: center;
-    flex-grow: 1;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: center;
-    margin-left: 10%;
-    margin-right: 10%;
-    height:70%
-    }
+  .alert{
+    text-align: center;
+    border:solid rgb(14, 13, 13) 3px;
+    font-size: larger;
+  }
 
-    .busqueda{
-      float: inline-end;
-
-    }
+  
     .login{
      position: absolute;
      right: 10px;
@@ -105,9 +62,9 @@ body {
   }
 
 
-
-
 }
+
+
 
 
 
@@ -121,17 +78,11 @@ ul{
     margin:0;
     }
 
-.envio{
-   display:flex;
-   flex-wrap: wrap;
-   border:solid rgb(253, 20, 3) 2px;
-   font-size: smaller;
-   justify-content:  center;
-   margin:7%;
-   color:rgb(240, 3, 3);
-   width:95%;
-  
-      }
+  .alert{
+      text-align: center;
+      border:solid rgb(14, 13, 13) 3px;
+      
+    }
 
 .container{
   display:flex;
@@ -142,36 +93,25 @@ ul{
   width:95%;
 }
 
-.logo{
-size: 5%;
-display: flex;
-align-items: left;}
+.navbar-expand{-sm|-md|-lg|-xl}
 
-.logo img{
-  width: 50%;
-  height: 80%;
- 
+.fa-search{
+  color:white
+}
+.btn{
+  float: left;
 }
 
-.busqueda{
-  display:flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  float: left;
-  width:40%;
-  align-content: center;
 
-  }
-
-form input[type="search"]{
-width: 80%;
-  }
+.navbar form{
+  width:70%;
+  height:100%
+}
 
 .login{
- float: left;
- margin-top: 15px;
- align-items: flex-end;
- width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 6%;
 }
 
 
@@ -190,6 +130,25 @@ width: 80%;
 }
 
 /*Footer*/
+.carousel-inner img {
+  width: 100%;
+  max-height: 250px;
+  max-width: 250px;
+  align-content: center;
+  justify-content: center;
+}
+.carousel-inner{
+  display:flex;
+  justify-content: center;
+}
+.title{
+  font-size: 20px;
+  border:solid black 2px;
+}
+.interes{
+  font-size: 20px;
+
+}
 
 .pie{
   display:flex;
