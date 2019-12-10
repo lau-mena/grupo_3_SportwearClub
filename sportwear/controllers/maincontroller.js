@@ -61,7 +61,7 @@ let controller = {
             let html = readHTML('Sale');
             res.send(html);
                      },           
-    login : (req, res) => {
+    login: (req, res) => {
             let html = readHTML('login');
             res.send(html);
                        },
