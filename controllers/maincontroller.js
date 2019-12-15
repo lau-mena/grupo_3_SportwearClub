@@ -10,8 +10,9 @@ function readHTML (fileName) {
 
 let controller = {
     home : (req, res) => {
-        let html = readHTML('index');
-        res.send(html);
+        res.render('index', {
+            title : 'Home',
+        })
     },
 
     productDetail : (req, res) => {
