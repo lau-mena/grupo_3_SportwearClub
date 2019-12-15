@@ -12,59 +12,104 @@ let controller = {
     home : (req, res) => {
         res.render('index', {
             title : 'Home',
+            bodyName : 'home',
         })
     },
 
     productDetail : (req, res) => {
-        let html = readHTML('productDetail');
-        res.send(html);
+        res.render('productDetail', {
+            title : 'Detail',
+            bodyName : 'detail',
+        })
+        
         },
     
     productCart : (req, res) => {
-        let html = readHTML('productCart');
-        res.send(html);
+        res.render('productCart', {
+            title : 'Product cart',
+            bodyName : 'cart',
+        })
+        
         },
 
     register : (req, res) => {
-        let html = readHTML('register');
-        res.send(html);
+        res.render('register', {
+            title : 'Register',
+            bodyName : 'register',
+        })
+        
         },
 
     productAdd : (req, res) => {
-        let html = readHTML('productAdd');
-        res.send(html);
+        res.render('productAdd', {
+            title : 'Product Add',
+            bodyName : 'add',
+        })
+        
         },
+
     FAQ : (req, res) => {
-            let html = readHTML('FAQ');
-            res.send(html);
-            },
+           res.render('FAQ',{
+               title: 'FAQ',
+               bodyName : 'faq',
+
+           })
+        },
+
     Nosotros : (req, res) => {
-                let html = readHTML('Nosotros');
-                res.send(html);
-                },
+            res.render('nosotros', {
+                title : 'Nosotros',
+                bodyName : 'nosotros',
+            });
+         
+         },
+
      Hombre : (req, res) => {
-             let html = readHTML('Hombre');
-             res.send(html);
+            res.render('hombre', {
+                title : 'Hombres',
+                bodyName : 'hombre',
+            })
+           
                     },
+
      Mujer : (req, res) => {
-            let html = readHTML('Mujer');
-            res.send(html);
-                        },         
+            res.render('mujer', {
+                title: 'Mujeres',
+                bodyName : 'mujer',
+            })
+        
+                        },   
+
      Nenes: (req, res) => {
-             let html = readHTML('Nenes');
-            res.send(html);
-                   },       
+             res.render('nenes',  {
+                 title : 'Nenes',
+                 bodyName : 'nenes',
+             })
+            
+                   },  
+
     Lonuevo: (req, res) => {
-            let html = readHTML('Lonuevo');
-            res.send(html);
-                          },   
+           res.render('lonuevo', {
+               title : 'New',
+               bodyName : 'new',
+           })
+         
+                          }, 
+
     Sale: (req, res) => {
-            let html = readHTML('Sale');
-            res.send(html);
-                     },           
+            res.render('sale', {
+                title : 'Sale',
+                bodyName : 'sale',
+            })
+            
+                     },     
+
     login : (req, res) => {
-            let html = readHTML('login');
-            res.send(html);
+            res.render('login',{
+                title : 'Login',
+                bodyName : 'login',
+            })
+            
                        },
                 
     
