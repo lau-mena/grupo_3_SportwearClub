@@ -1,4 +1,23 @@
 <%- include('partials/head') %>
 <%- include('partials/header') %>
-<h1>LOGIN</h1>
+<form action="action_page.php" method="post">
+    <div class="container-login">
+      <label for="uname">CORREO ELECTRÓNICO</label>
+      <input type="text" placeholder="Ingrese correo electrónico" name="uname" required>
+  
+      <label for="psw">CONTRASEÑA</label>
+      <input type="password" placeholder="Inserte contraseña" name="psw" required>
+  
+      <button type="submit">LOGIN</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Recordar mis datos
+      </label> 
+      
+    </div>
+  
+    <div class="container" >
+      <button type="button" class="cancelbtn">CANCELAR</button>
+      
+    </div>
+  </form>
 <%- include('partials/footer') %>
