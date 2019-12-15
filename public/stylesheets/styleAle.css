@@ -21,6 +21,9 @@ ul{
 header{
   font-size: 80%;
 }
+.row {
+  padding-left: 15px;
+}
 .nav-texto{
   display: none;
 }
@@ -53,6 +56,9 @@ header{
 }
 .login a{
   color: white;
+}
+.login li a {
+  font-size: .8em;
 }
 
 .btn-secondary, .btn-secondary:hover{
@@ -239,12 +245,8 @@ header{
 
   /*FAQ*/
 
-  body .faq {
-    color: black;
-  }
-
   div.preguntas {
-    margin: 15px;
+    margin: 2em;
   }
   p.question {
     font-weight: bold;
@@ -255,13 +257,39 @@ header{
   }
 
   h1.title-faq {
-    font-size: 2em;
+    font-size: 1.5em;
     text-transform: uppercase;
+  }
+
+  /*REGISTER*/
+  div.registerBody{
+    margin: 2em;
+  }
+  h1.title-register {
+    font-size: 1.5em;
   }
 
 
 @media (min-width: 576px){ 
+  /*HEADER*/
+  .login li a {
+    font-size: 1em;
+  }
+
+  .search-bar {
+    padding-left: 0;
+  }
+  .row ul.enlaces{
+    padding-right: 0;
+  }
+
+  ul.enlaces li a{
+    padding-right: 12px;
+  }
   /*FOOTER*/
+  footer.footer a {
+    font-size: 1em;
+  }
   .logo-img{
     height: 70px;
   }
@@ -306,6 +334,7 @@ header{
   text-align: right;
   
 }
+
 .search-bar{
   padding: 2px 15px 0 0;
 }
@@ -431,6 +460,14 @@ header{
   }
   .a-tipos:hover{
     border-bottom: black solid 3px;
+  }
+  /* FAQ */
+  h1.title-faq {
+    font-size: 2em;
+  }
+
+  div.preguntas {
+    margin: 2em 10em;
   }
   
   }
