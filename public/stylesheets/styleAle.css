@@ -58,7 +58,7 @@ header{
   color: white;
 }
 .login li a {
-  font-size: .8em;
+  font-size: 1em;
 }
 
 .btn-secondary, .btn-secondary:hover{
@@ -100,7 +100,7 @@ header{
   text-align: right;
 }
 .company ul a{
-  font-size: .8em;
+  font-size: 1em;
   color: white;
   font-weight: bold;
   text-align: right;
@@ -111,7 +111,7 @@ header{
   text-align: right;
 }
 .help ul a{
-  font-size: .8em;
+  font-size: 1em;
   font-weight: bold;
   color: white;
   text-align: right;
@@ -257,6 +257,7 @@ header{
   }
 
   h1.title-faq {
+    margin-bottom: 15px;
     font-size: 1.5em;
     text-transform: uppercase;
   }
@@ -267,6 +268,37 @@ header{
   }
   h1.title-register {
     font-size: 1.5em;
+    margin-bottom: 15px;
+  }
+  label.sinPadding {
+    padding: 0;
+  }
+  p.form-register {
+    font-size: .8em;
+  }
+
+  p.form-register select{
+    padding: 10px;
+    text-transform: uppercase;
+  }
+  
+  p.form-register select option{
+    padding: 10px;
+    text-transform: uppercase;
+  }
+  p.form-register input.date{
+    padding: 10px;
+    text-transform: uppercase;
+  }
+  p label.check-register{
+    text-transform: uppercase;
+    font-size: .8em;
+  }
+  button.boton-register{
+    padding: 10px;
+    color: white;
+    background-color: black;
+    font-size: .8em;
   }
 
 
@@ -340,6 +372,11 @@ header{
 }
 .nav1 {
   padding-top: 0;
+}
+
+/*REGISTER*/
+div.registerBody{
+  
 }
 }
 
@@ -468,6 +505,20 @@ header{
 
   div.preguntas {
     margin: 2em 10em;
+  }
+
+  /*REGISTER*/
+  h1.title-register{
+    font-size: 2em;
+  }
+  p label.check-register{
+    font-size: 1em;
+  }
+  button.boton-register{
+    font-size: 1em;
+  }
+  p.form-register {
+    font-size: 1em;
   }
   
   }
