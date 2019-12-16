@@ -21,9 +21,7 @@ ul{
 header{
   font-size: 80%;
 }
-.row {
-  padding-left: 15px;
-}
+
 .nav-texto{
   display: none;
 }
@@ -132,7 +130,7 @@ header{
 }
 
 .d-block {
-  height: 35vh;
+  height: 50vh;
 }
 
 .categorias {
@@ -244,6 +242,15 @@ header{
   text-decoration: none;
 }
 
+/*CAROUSEL*/
+div.carousel-down{
+  display: none;
+}
+div.carousel-title{
+  display: none;
+}
+
+
 
   /*FAQ*/
   body.faq{
@@ -300,16 +307,27 @@ header{
     
   }
   button.boton-register{
-    padding: 10px;
+    padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
     color: white;
     background-color: black;
     
   }
+  button.boton-register:hover{
+    opacity: 0.8;
+  }
+ 
   div.registerBody input.register, div.registerBody select{
     width: 85vw;
 
   }
   /*LOGIN*/
+
+body.bodyLogin{
+  font-size: .8em;
+}
 
 input[type=text], input[type=password] {
   width: 100%;
@@ -320,7 +338,7 @@ input[type=text], input[type=password] {
   box-sizing: border-box;
 }
 
-button {
+button.btn-login{
   background-color:black;
   color: white;
   padding: 14px 20px;
@@ -330,21 +348,19 @@ button {
   width: 100%;
 }
 
-button:hover {
+button.btn-login:hover {
   opacity: 0.8;
 }
 
-.cancelbtn {
-  width: auto;
-  padding: 10px 18px;
-  background-color: black
-}
 .container-login {
  margin: 2em 2em;
+ position: relative;
 }
 span.psw {
-  float: center;
-  padding-top: 16px;
+  display: inline-block;
+  position: absolute;
+  right: 0;
+
 }
 
 
@@ -465,7 +481,7 @@ div.registerBody input.register, div.registerBody select{
     height: 110vh;
   }
   .container-tablet{
-      margin: 20px;
+      margin: 15px;
     }
   
     .d-block {
@@ -485,8 +501,20 @@ div.registerBody input.register, div.registerBody select{
   .ir-a, .ir-a:hover{
     height: 10%;
   }
-  /*REGISTER*/
-  
+  /*CAROUSEL*/
+  div.carousel-down{
+    display: flex;
+    margin: 15px;
+  }
+  div.carousel-title{
+    display: block;
+    text-align: center;
+    margin: 15px 0;
+  }
+  div.carousel-title h1{
+    font-size: 1.5em;
+    font-weight: bold;
+  }
   }
 
   @media (min-width: 992px){
@@ -580,5 +608,8 @@ div.registerBody input.register, div.registerBody select{
 .container-login {
   margin: 2em 10em;
  }
+ body.bodyLogin{
+  font-size: 1em;
+}
 
   }
