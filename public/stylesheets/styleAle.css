@@ -201,8 +201,8 @@ header{
 
 .a-lifestyle{
   display: inline-block;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
+  background-color: rgb(245, 245, 86);
+  color: black;
   text-align: center;
   z-index: 1;
   left: 4%;
@@ -277,19 +277,22 @@ div.carousel-title{
   /*REGISTER*/
   body.register{
     font-size: .8em;
+ 
   }
   div.registerBody{
     margin: 2em;
+    overflow: hidden;
   }
   h1.title-register {
     font-size: 1.5em;
     margin-bottom: 15px;
   }
   label.sinPadding {
-    padding: 0;
+    padding: 0 15px;
   }
 
   p.form-register select{
+    margin: 0 0 0 15px;
     padding: 10px;
     text-transform: uppercase;
   }
@@ -306,6 +309,10 @@ div.carousel-title{
     text-transform: uppercase;
     
   }
+  input.register{
+    margin: 10px 0 10px  15px;
+    padding: 0;
+  }
   button.boton-register{
     padding: 14px 20px;
   margin: 8px 0;
@@ -320,16 +327,33 @@ div.carousel-title{
   }
  
   div.registerBody input.register, div.registerBody select{
-    width: 85vw;
+    width: 82vw;
 
   }
+  div.div-register{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(245, 245, 86);
+    height: 100px;
+  }
+  div.div-register p{
+    margin: 0;
+  }
+  div.div-register p a{
+    color: black;
+    font-size: 1em;
+    font-weight: bold;
+  
+	}
+
   /*LOGIN*/
 
 body.bodyLogin{
   font-size: .8em;
 }
 
-input[type=text], input[type=password] {
+input[type=text].login-input, input[type=password].login-input {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -546,8 +570,27 @@ div.registerBody input.register, div.registerBody select{
       height: 500px;
     }
     .img-lifestyle{
-      height: 45vh;
-      width: 100%;
+      height: 70vh;
+      width: 110%;
+    }
+    div.lifestyles{
+      overflow: hidden;
+      box-sizing: border-box;
+    }
+    div.div-lifestyle1{
+      padding-right: 0;
+    }
+    div.div-lifestyle{
+      margin-right: 15px;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background-color: rgb(245, 245, 86);
+    }
+    div.div-lifestyle:hover{
+      background-color: white;
     }
     .a-lifestyle {
       display: none;
@@ -559,16 +602,17 @@ div.registerBody input.register, div.registerBody select{
   }
   .a-lifestyle-desk{
     font-family: 'Asap', sans-serif;
-    text-align: right;
+    text-align:center;
     width: 100%;
     display:inline-flex;
     align-items: center;
     color: black;
-    font-size: 3em;
+    font-size: 2.5em;
+    padding: 20px;
     
   }
   .a-lifestyle-desk:hover{
-    color: rgba(0, 0, 0, 0.5);
+    color:  rgb(245, 245, 86);
     text-decoration: none;
 
   }
