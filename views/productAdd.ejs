@@ -1,4 +1,44 @@
 <%- include('partials/head') %>
 <%- include('partials/header') %>
-
+<h1>CREA UN PRODUCTO</h1>
+<form action="/productAdd" method="post">
+    <div>
+        <label>Nombre del producto</label>
+        <input type="text" name="productName">
+    </div>
+    <div>
+        <label>Precio del producto:</label>
+        <input type="text" name="productPrice">
+    </div>
+    <div>
+        <label>Descripción del producto:</label>
+        <textarea name="productDescription"></textarea>
+    </div>
+    <div>
+        <label>Categoria</label>
+        <select name="category">
+            <option value="mujer">Mujer</option>
+            <option value="hombre">Hombre</option>
+            <option value="nenes">Niños</option>
+        </select>
+    </div>
+    <div>
+        <label>Tipo de producto</label>
+        <select name="type">
+            <option value="indumentaria">Indumentaria</option>
+            <option value="calzado">Calzado</option>
+            <option value="accesorios">Accesorios</option>
+        </select>
+    </div>
+    <div>
+        <label>Status</label>
+        <select name="status">
+            <option value="new">New</option>
+            <option value="sale">Sale</option>
+            <option value="none">No aplica</option>
+        </select>
+    </div>
+    <button type="submit">Guardar</button>
+</form>
+</body>
 <%- include('partials/footer') %>

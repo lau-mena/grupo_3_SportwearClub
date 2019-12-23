@@ -1,12 +1,20 @@
 const fs = require('fs');
 const path = require('path');
 
-// ************ Function to Read an HTML File ************
-function readHTML (fileName) {
-	let filePath = path.join(__dirname, `/../views/${fileName}.html`);
-	let htmlFile = fs.readFileSync(filePath, 'utf-8');
-	return htmlFile;
-};
+
+const userFilePath = __dirname + '/../data/products.json';
+
+function getProducts () {
+	let usersFileContent = fs.readFileSync(userFilePath, 'utf-8');
+	let finalProduct = usersFileContent == '' ? [] : JSON.parse(usersFileContent); 
+	return finalProduct;
+}
+function storeProduct (newProduct) {
+	let allProducts = getProducts();
+	allProducts.push(newProduct);
+	fs.writeFileSync(userFilePath, JSON.stringify(allProducts, null, ' '));
+}
+
 
 let controller = {
     home : (req, res) => {
@@ -40,12 +48,25 @@ let controller = {
         
         },
 
-    productAdd : (req, res) => {
+    productShow : (req, res) => {
         res.render('productAdd', {
             title : 'Product Add',
             bodyName : 'add',
         })
         
+        },
+    productAdd : (req, res) => {
+        let newAddProduct = {
+			nombre: req.body.productName,
+			precio: req.body.productPrice,
+			descripcion: req.body.productDescription,
+			categoria: req.body.category,
+            tipo: req.body.type,
+            status: req.body.status, 
+		};
+		
+		// Guardar al usario
+		storeProduct(newAddProduct);
         },
 
     FAQ : (req, res) => {

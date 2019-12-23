@@ -1,0 +1,18 @@
+[
+ {
+  "nombre": "Remera",
+  "precio": "433",
+  "descripcion": "Remera linda",
+  "categoria": "mujer",
+  "tipo": "indumentaria",
+  "status": "sale"
+ },
+ {
+  "nombre": "Remera",
+  "precio": "433",
+  "descripcion": "Remera linda",
+  "categoria": "mujer",
+  "tipo": "indumentaria",
+  "status": "sale"
+ }
+]
