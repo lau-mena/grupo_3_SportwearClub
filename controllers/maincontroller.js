@@ -2,19 +2,26 @@ const fs = require('fs');
 const path = require('path');
 
 
-const userFilePath = __dirname + '/../data/products.json';
+const productFilePath = __dirname + '/../data/products.json';
 
 function getProducts () {
-	let usersFileContent = fs.readFileSync(userFilePath, 'utf-8');
-	let finalProduct = usersFileContent == '' ? [] : JSON.parse(usersFileContent); 
-	return finalProduct;
+	let productsContent = fs.readFileSync(productFilePath, 'utf-8');
+	let finalProducts = productsContent == '' ? [] : JSON.parse(productsContent); 
+	return finalProducts;
 }
 function storeProduct (newProduct) {
 	let allProducts = getProducts();
 	allProducts.push(newProduct);
-	fs.writeFileSync(userFilePath, JSON.stringify(allProducts, null, ' '));
+	fs.writeFileSync(productFilePath, JSON.stringify(allProducts, null, ' '));
 }
-
+function generateProductId () {
+	let allProducts = getProducts();
+	if (allProducts.length == 0) {
+		return 1;
+	}
+	let lastProduct = allProducts.pop();
+	return lastProduct.id + 1;
+}
 
 let controller = {
     home : (req, res) => {
@@ -55,17 +62,22 @@ let controller = {
         })
         
         },
-    productAdd : (req, res) => {
+    productAdd : (req, res, next) => {
         let newAddProduct = {
+            id: generateProductId(),
 			nombre: req.body.productName,
 			precio: req.body.productPrice,
 			descripcion: req.body.productDescription,
 			categoria: req.body.category,
             tipo: req.body.type,
-            status: req.body.status, 
-		};
-		
-		// Guardar al usario
+            status: req.body.status,
+            avatar: req.file.filename,
+          
+            
+        };
+        
+        console.log(next);
+        
 		storeProduct(newAddProduct);
         },
 

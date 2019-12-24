@@ -1,18 +1,22 @@
 [
  {
-  "nombre": "Remera",
-  "precio": "433",
-  "descripcion": "Remera linda",
-  "categoria": "mujer",
+  "id": 1,
+  "nombre": "Remera reebok",
+  "precio": "$999",
+  "descripcion": "Lucí con orgullo tu pasión por adidas. Este cómodo top deportivo luce las 3 Tiras en los costados y un logo del Trifolio, que le confieren un auténtico estilo deportivo. El escote profundo y las tiras anchas hacen que sea muy cómodo. El tejido es suave al tacto y se adapta a tu silueta.",
+  "categoria": "hombre",
   "tipo": "indumentaria",
-  "status": "sale"
+  "status": "none",
+  "avatar": "user_avatar_1577200726456.jpg"
  },
  {
-  "nombre": "Remera",
-  "precio": "433",
-  "descripcion": "Remera linda",
+  "id": 2,
+  "nombre": "Remera Adidas",
+  "precio": "$999",
+  "descripcion": "Lucí con orgullo tu pasión por adidas. Este cómodo top deportivo luce las 3 Tiras en los costados y un logo del Trifolio, que le confieren un auténtico estilo deportivo. El escote profundo y las tiras anchas hacen que sea muy cómodo. El tejido es suave al tacto y se adapta a tu silueta.",
   "categoria": "mujer",
   "tipo": "indumentaria",
-  "status": "sale"
+  "status": "sale",
+  "avatar": "user_avatar_1577200794908.JPG"
  }
 ]

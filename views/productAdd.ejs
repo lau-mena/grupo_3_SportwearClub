@@ -1,9 +1,9 @@
 <%- include('partials/head') %>
 <%- include('partials/header') %>
 <h1>CREA UN PRODUCTO</h1>
-<form action="/productAdd" method="post">
+<form action="/productAdd" method="POST" enctype="multipart/form-data" >
     <div>
-        <label>Nombre del producto</label>
+        <label>Nombre del producto:</label>
         <input type="text" name="productName">
     </div>
     <div>
@@ -15,7 +15,35 @@
         <textarea name="productDescription"></textarea>
     </div>
     <div>
-        <label>Categoria</label>
+        <label>Color:</label>
+        <select name="color">
+            <option value="negro">Negro</option>
+            <option value="blanco">Blanco</option>
+            <option value="gris">Gris</option>
+            <option value="azul">Azul</option>
+            <option value="verde">Verde</option>
+            <option value="rojo">Rojo</option>
+            <option value="amarillo">Amarillo</option>
+            <option value="naranja">Naranja</option>
+            <option value="bordo">Bordó</option>
+            <option value="rosa">Rosa</option>
+            <option value="celeste">Celeste</option>
+            <option value="natural">Natural</option>
+            <option value="fucsia">Fucsia</option>
+            <option value="lila">Lila</option>
+            <option value="mostaza">Mostaza</option>
+        </select>
+    </div>
+    <div>
+        <label>Talle:</label>
+        <select name="size">
+            <option value="S-M-L-XL">S - M - L - XL</option>
+            <option value="36-al-43">36 al 43</option>
+            <option value="none">No aplica</option>
+        </select>
+    </div>
+    <div>
+        <label>Categoria:</label>
         <select name="category">
             <option value="mujer">Mujer</option>
             <option value="hombre">Hombre</option>
@@ -23,7 +51,7 @@
         </select>
     </div>
     <div>
-        <label>Tipo de producto</label>
+        <label>Tipo de producto:</label>
         <select name="type">
             <option value="indumentaria">Indumentaria</option>
             <option value="calzado">Calzado</option>
@@ -31,14 +59,18 @@
         </select>
     </div>
     <div>
-        <label>Status</label>
+        <label>Status:</label>
         <select name="status">
             <option value="new">New</option>
             <option value="sale">Sale</option>
             <option value="none">No aplica</option>
         </select>
     </div>
-    <button type="submit">Guardar</button>
+    <div>
+        <label>Imagen</label>
+        <input type="file" name="avatar">
+    </div>
+    <button type="submit">Crear producto</button>
 </form>
 </body>
 <%- include('partials/footer') %>
