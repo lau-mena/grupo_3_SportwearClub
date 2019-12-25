@@ -1,22 +1,50 @@
 [
  {
   "id": 1,
-  "nombre": "Remera reebok",
+  "nombre": "Remera Adidas",
   "precio": "$999",
-  "descripcion": "Lucí con orgullo tu pasión por adidas. Este cómodo top deportivo luce las 3 Tiras en los costados y un logo del Trifolio, que le confieren un auténtico estilo deportivo. El escote profundo y las tiras anchas hacen que sea muy cómodo. El tejido es suave al tacto y se adapta a tu silueta.",
+  "descripcion": "Los logotipos de gran tamaño fueron uno de los emblemas de los diseños urbanos de los 90. Esta remera captura el espíritu de esa época con dos grandes logos lineales del Trifolio al frente y al centro. Está confeccionada en tejido de punto simple 100% algodón muy suave al tacto.",
   "categoria": "hombre",
   "tipo": "indumentaria",
-  "status": "none",
-  "avatar": "user_avatar_1577200726456.jpg"
+  "color": "Blanco",
+  "talle": "S-M-L-XL",
+  "status": "New",
+  "avatar": "user_avatar_1577213234018.JPG"
  },
  {
   "id": 2,
-  "nombre": "Remera Adidas",
-  "precio": "$999",
-  "descripcion": "Lucí con orgullo tu pasión por adidas. Este cómodo top deportivo luce las 3 Tiras en los costados y un logo del Trifolio, que le confieren un auténtico estilo deportivo. El escote profundo y las tiras anchas hacen que sea muy cómodo. El tejido es suave al tacto y se adapta a tu silueta.",
+  "nombre": "Sweater Adidas",
+  "precio": "$2199",
+  "descripcion": "Corte clásico que no es ajustado ni holgado, tiene el punto de ajuste perfecto.",
+  "categoria": "hombre",
+  "tipo": "indumentaria",
+  "color": "Negro",
+  "talle": "S-M-L-XL",
+  "status": "none",
+  "avatar": "user_avatar_1577283811355.jpg"
+ },
+ {
+  "id": 3,
+  "nombre": "Top Nike",
+  "precio": "$1499",
+  "descripcion": "Este cómodo top deportivo luce las 3 Tiras en los costados y un logo del Trifolio, que le confieren un auténtico estilo deportivo. El escote profundo y las tiras anchas hacen que sea muy cómodo. El tejido es suave al tacto y se adapta a tu silueta.",
   "categoria": "mujer",
   "tipo": "indumentaria",
-  "status": "sale",
-  "avatar": "user_avatar_1577200794908.JPG"
+  "color": "Celeste",
+  "talle": "S-M-L-XL",
+  "status": "New",
+  "avatar": "user_avatar_1577294397475.JPG"
+ },
+ {
+  "id": 4,
+  "nombre": "Zapatillas training",
+  "precio": "$6499",
+  "descripcion": "Experimentá comodidad total en cada entrenamiento. Estas zapatillas flexibles traen un exterior textil suave que ofrece un ajuste ceñido tipo media. ",
+  "categoria": "mujer",
+  "tipo": "calzado",
+  "color": "Rosa",
+  "talle": "36-al-43",
+  "status": "none",
+  "avatar": "user_avatar_1577299149063.JPG"
  }
 ]

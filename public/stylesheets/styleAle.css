@@ -1,3 +1,8 @@
+*{
+  box-sizing: border-box;
+  
+
+}
 body {
   font-family: 'Prompt', sans-serif;
   box-sizing: border-box;
@@ -5,11 +10,7 @@ body {
   
   }
 
-*{
-  box-sizing: border-box;
-  
 
-}
 a, a:hover{
   text-decoration: none;
 }
@@ -82,6 +83,9 @@ header{
 .boton-search{
   background: transparent;
   padding-left: 5px;
+}
+a.shopping-cart i{
+  color: white;
 }
 /*FOOTER*/
 .metodos i{
@@ -387,8 +391,133 @@ span.psw {
 
 }
 
+/*DETAIL*/
+div.div-detail img{
+  width: 100vw;
+}
+div.div-detail h2{
+  margin: 15px 15px 0;
+  font-size: 1.5em;
+}
+div.div-detail p{
+  margin: 0 0 15px 15px;
+  font-size: .8em;
+}
 
+div.div-detail-content p{
+  text-align: center;
+  font-size: .8em;
+}
+div.div-detail-content h2 {
+  text-align: center;
+  font-size: 1.5em;
+}
+div.div-detail-content p.descripcion{
+  margin: 15px;
+  text-align: justify;
+}
+div.div-detail-content{
+  min-height: 300px;
+}
+div.div-detail-content .display-sm{
+  display: none;
+}
+button.btn-detail {
+  display: block;
+  background-color:black;
+  color: white;
+  padding: 14px 20px;
+  margin: 15px auto;  
+  border: none;
+  cursor: pointer;
+  width: 90%;
+}
+
+p.center i.gris{
+  color: #ccc;
+}
+p.center i.celeste{
+  color: rgb(91, 195, 187);
+}
+p.center i.azul{
+  color: rgb(17, 19, 141);
+}
+p.center i.verde{
+  color: rgb(46, 167, 72);
+}
+p.center i.rojo{
+  color: rgb(226, 40, 40);
+}
+p.center i.amarillo{
+  color: rgba(255, 238, 0, 0.74);
+}
+p.center i.naranja{
+  color: rgb(245, 134, 7);
+}
+p.center i.bordo{
+  color: rgb(104, 12, 12);
+}
+p.center i.rosa{
+  color: rgb(241, 201, 201);
+}
+p.center i.natural{
+  color: rgb(228, 233, 160);
+}
+p.center i.fucsia{
+  color: rgb(236, 6, 129);
+}
+p.center i.lila{
+  color: rgb(174, 91, 195);
+}
+p.center i.mostaza{
+  color: rgb(216, 176, 0);
+}
+
+label div.talle{
+  background-color: black;
+  text-align: center;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  padding: 5px;
+  margin: 5px;
+  margin-left: 15px;
   
+}
+div.talleIndumentaria, div.talleCalzado{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+div.progress-bars{
+  display: none;
+}
+
+/*MUJER HOMBRE NIÑOS*/
+
+  h4.titleCategory{
+    text-transform: uppercase;
+    padding: 5px 0 10px;
+    text-align: center;
+    color: rgb(158, 158, 158);
+    font-size: .8em;
+    border-bottom: 1px solid rgb(158, 158, 158);
+  }
+  img.img-category{
+    width: 100vw;
+  }
+  a.a-category h2{
+    font-size: 1.5em;
+    color: black;
+    text-align: center;
+    margin-bottom: 0;
+  }
+  p.p-category{
+    font-size: .8em;
+    text-align: center;
+  }
 
 
 @media (min-width: 576px){ 
@@ -474,6 +603,18 @@ div.dropdown{
 div.registerBody input.register, div.registerBody select{
   width: 400px;
 }
+/*DETAIL*/
+div.progress-bars{
+  display: flex;
+}
+
+div.progress {
+  margin-bottom: 15px;
+}
+div.progress div.progress-bar{
+  background-color:rgb(245, 245, 86);
+}
+
 }
 
 @media (min-width: 768px){
@@ -546,6 +687,7 @@ div.registerBody input.register, div.registerBody select{
     font-size: 1.5em;
     font-weight: bold;
   }
+ 
   }
 
   @media (min-width: 992px){
@@ -661,6 +803,28 @@ div.registerBody input.register, div.registerBody select{
  }
  body.bodyLogin{
   font-size: 1em;
+}
+ /*DETAIL*/
+ div.div-detail-content .display-sm{
+  display:block;
+}
+div.div-detail .display-sm {
+display: none;
+}
+div.div-detail-content h2.display-sm {
+  margin-top: 15px;
+}
+div.div-detail img{
+  width: 100%;
+  max-height: 500px;
+
+}
+div.div-detail-content {
+ align-self: flex-end;
+}
+
+div.div-detail-content div.div-detail{
+  max-height: 500px;
 }
 
   }

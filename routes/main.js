@@ -28,7 +28,7 @@ const mainController = require('../controllers/mainController');
 /* Rutas a los archivos */
 
 router.get('/', mainController.home);
-router.get('/productDetail', mainController.productDetail);
+router.get('/productDetail/:id', mainController.productDetail);
 router.get('/productCart', mainController.productCart);
 router.get('/register', mainController.register);
 router.get('/productAdd', mainController.productShow);
@@ -41,6 +41,8 @@ router.get('/Nenes', mainController.Nenes);
 router.get('/Lonuevo', mainController.Lonuevo);
 router.get('/Sale', mainController.Sale);
 router.get('/login', mainController.login);
-
+router.get('/indumentaria', mainController.indumentaria);
+router.get('/accesorios', mainController.accesorios);
+router.get('/calzado', mainController.Calzado);
 
 module.exports = router;

@@ -1,4 +1,12 @@
 <%- include('partials/head') %>
 <%- include('partials/header') %>
-<h1>MUJERES</h1>
+<div>
+    <h4 class="titleCategory">Disfrutá de nuestros productos</h4>
+</div>
+<% products.forEach(product => { if(product.categoria == 'mujer') {%>
+   <img class="img-category" src="../images/avatars/<%=product.avatar%>" alt="">
+    <a class="a-category" href="/productDetail/<%=product.id%>"><h2> <%= product.nombre %> </h2></a>
+    <p class="p-category"> <%= product.precio %> </p>
+<% }}) %>
+</body>
 <%- include('partials/footer') %>
