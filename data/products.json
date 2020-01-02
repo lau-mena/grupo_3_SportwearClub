@@ -46,5 +46,17 @@
   "talle": "36-al-43",
   "status": "none",
   "avatar": "user_avatar_1577299149063.JPG"
+ },
+ {
+  "id": 5,
+  "nombre": "Calza deportiva",
+  "precio": "$2499",
+  "descripcion": "Corte ajustado que no restringe el movimiento y envuelve las piernas casi como una segunda piel. Cintura media.",
+  "categoria": "mujer",
+  "tipo": "indumentaria",
+  "color": "Negro",
+  "talle": "S-M-L-XL",
+  "status": "Sale",
+  "avatar": "user_avatar_1577317121949.JPG"
  }
 ]

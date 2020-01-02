@@ -1,3 +1,14 @@
+*{
+  box-sizing: border-box;
+  color: black;
+}
+.pa {
+  display: flex;
+}
+
+.pa_child{
+  border: 1px solid black;
+}
 body {
   padding: 2%;
   font-family: 'Prompt', sans-serif;
@@ -5,10 +16,6 @@ body {
   overflow: hidden;
   }
 
-*{
-  box-sizing: border-box;
-  color: black;
-}
 /* Tablet*/
 @media(min-width:767px){
 

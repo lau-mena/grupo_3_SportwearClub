@@ -10,6 +10,7 @@ function getProducts() {
     return finalProducts;
 }
 
+
 function storeProduct(newProduct) {
     let allProducts = getProducts();
     allProducts.push(newProduct);
@@ -63,6 +64,8 @@ let controller = {
         })
 
     },
+    
+ 
 
     register: (req, res) => {
         res.render('register', {
@@ -95,10 +98,9 @@ let controller = {
 
         };
 
-        console.log(next);
-
         storeProduct(newAddProduct);
     },
+
 
     FAQ: (req, res) => {
         res.render('FAQ', {
@@ -118,7 +120,7 @@ let controller = {
 
     Hombre: (req, res) => {
         let productsContent = fs.readFileSync(productFilePath, 'utf-8');
-        let products = JSON.parse(productsContent);
+        let products = getProducts();;
         res.render('hombre', {
             products: products,
             title: 'Hombres',
@@ -126,10 +128,15 @@ let controller = {
         })
 
     },
+    deleteProduct: (req, res) => {
+        let productsContent = fs.readFileSync(productFilePath, 'utf-8');
+        let products = getProducts();
+      
+    },
 
     Mujer: (req, res) => {
         let productsContent = fs.readFileSync(productFilePath, 'utf-8');
-        let products = JSON.parse(productsContent);
+        let products = getProducts();
         res.render('mujer', {
             products: products,
             title: 'Mujeres',
@@ -139,7 +146,10 @@ let controller = {
     },
 
     Nenes: (req, res) => {
+        let productsContent = fs.readFileSync(productFilePath, 'utf-8');
+        let products = getProducts();
         res.render('nenes', {
+            products: products,
             title: 'Nenes',
             bodyName: 'nenes',
         })
@@ -147,7 +157,10 @@ let controller = {
     },
 
     Lonuevo: (req, res) => {
+        let productsContent = fs.readFileSync(productFilePath, 'utf-8');
+        let products = getProducts();
         res.render('lonuevo', {
+            products: products,
             title: 'New',
             bodyName: 'new',
         })
@@ -155,7 +168,10 @@ let controller = {
     },
 
     Sale: (req, res) => {
+        let productsContent = fs.readFileSync(productFilePath, 'utf-8');
+        let products = getProducts();
         res.render('sale', {
+            products:  products,
             title: 'Sale',
             bodyName: 'sale',
         })
@@ -172,7 +188,7 @@ let controller = {
 
     Calzado:(req, res) => {
         let productsContent = fs.readFileSync(productFilePath, 'utf-8');
-        let products = JSON.parse(productsContent);
+        let products = getProducts();
         res.render('calzado', {
             products : products,
             title: 'Calzado',
@@ -182,7 +198,7 @@ let controller = {
 
     indumentaria:(req, res) => {
         let productsContent = fs.readFileSync(productFilePath, 'utf-8');
-        let products = JSON.parse(productsContent);
+        let products = getProducts();
         res.render('indumentaria', {
             products : products,
             title: 'Indumentaria',
@@ -192,7 +208,7 @@ let controller = {
 
     accesorios:(req, res) => {
         let productsContent = fs.readFileSync(productFilePath, 'utf-8');
-        let products = JSON.parse(productsContent);
+        let products = getProducts();
         res.render('accesorios', {
             products : products,
             title: 'Accesorios',
