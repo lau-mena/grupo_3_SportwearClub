@@ -24,30 +24,6 @@
   "avatar": "user_avatar_1577283811355.jpg"
  },
  {
-  "id": 3,
-  "nombre": "Top Nike",
-  "precio": "$1499",
-  "descripcion": "Este cómodo top deportivo luce las 3 Tiras en los costados y un logo del Trifolio, que le confieren un auténtico estilo deportivo. El escote profundo y las tiras anchas hacen que sea muy cómodo. El tejido es suave al tacto y se adapta a tu silueta.",
-  "categoria": "mujer",
-  "tipo": "indumentaria",
-  "color": "Celeste",
-  "talle": "S-M-L-XL",
-  "status": "New",
-  "avatar": "user_avatar_1577294397475.JPG"
- },
- {
-  "id": 4,
-  "nombre": "Zapatillas training",
-  "precio": "$6499",
-  "descripcion": "Experimentá comodidad total en cada entrenamiento. Estas zapatillas flexibles traen un exterior textil suave que ofrece un ajuste ceñido tipo media. ",
-  "categoria": "mujer",
-  "tipo": "calzado",
-  "color": "Rosa",
-  "talle": "36-al-43",
-  "status": "none",
-  "avatar": "user_avatar_1577299149063.JPG"
- },
- {
   "id": 5,
   "nombre": "Calza deportiva",
   "precio": "$2499",

@@ -1,0 +1,97 @@
+<%- include('partials/head') %>
+<%- include('partials/header') %>
+<div class="addBody">
+    <h1 class="titleAdd">EDITAR PRODUCTO</h1>
+    <form action="/productEdit/?_method=PUT" method="POST" enctype="multipart/form-data" >
+        <div class="row">
+            <p class="pAdd">
+                <label class="col-12">Nombre del producto:</label class"col-12">
+                <input class="col-12" type="text" name="productName">
+            </p>
+        </div>
+        <div class="row">
+            <p class="pAdd">
+                <label class="col-12">Precio del producto:</label>
+                <input class="col-12" type="text" name="productPrice">
+            </p>
+        </div>
+        <div class="row">
+            <p class="pAdd">
+                <label class="col-12">Descripción del producto:</label>
+                <textarea class="col-12" name="productDescription"></textarea>
+            </p>
+        </div>
+        <div class="row">
+            <p class="pAdd">
+                <label class="col-12">Color:</label>
+                <select class="col-12" name="color">
+                    <option value="Negro">Negro</option>
+                    <option value="Blanco">Blanco</option>
+                    <option value="Gris">Gris</option>
+                    <option value="Azul">Azul</option>
+                    <option value="Verde">Verde</option>
+                    <option value="Rojo">Rojo</option>
+                    <option value="Amarillo">Amarillo</option>
+                    <option value="Naranja">Naranja</option>
+                    <option value="Bordo">Bordó</option>
+                    <option value="Rosa">Rosa</option>
+                    <option value="Celeste">Celeste</option>
+                    <option value="Natural">Natural</option>
+                    <option value="Fucsia">Fucsia</option>
+                    <option value="Lila">Lila</option>
+                    <option value="Mostaza">Mostaza</option>
+                </select>
+            </p>
+        </div>
+        <div class="row">
+            <p class="pAdd">
+                <label class="col-12">Talle:</label>
+                <select class="col-12 add" name="size">
+                    <option value="S-M-L-XL">S - M - L - XL</option>
+                    <option value="36-al-43">36 al 43</option>
+                    <option value="none">No aplica</option>
+                </select>
+            </p>
+        </div>
+        <div class="row">
+            <p class="pAdd">
+                <label class="col-12">Categoria:</label>
+                <select class="col-12 add" name="category">
+                    <option value="mujer">Mujer</option>
+                    <option value="hombre">Hombre</option>
+                    <option value="nenes">Niños</option>
+                </select>
+            </p>
+        </div>
+        <div class="row">
+            <p class="pAdd">
+                <label class="col-12">Tipo de producto:</label>
+                <select class="col-12 add" name="type">
+                    <option value="indumentaria">Indumentaria</option>
+                    <option value="calzado">Calzado</option>
+                    <option value="accesorios">Accesorios</option>
+                </select>
+            </p>
+        </div>
+        <div class="row">
+            <p class="pAdd">
+                <label class="col-12">Status:</label>
+                <select class="col-12 add" name="status">
+                    <option value="New">New</option>
+                    <option value="Sale">Sale</option>
+                    <option value="none">No aplica</option>
+                </select>
+            </p>
+        </div>
+        <div class="row">
+            <p class="pAdd examinar">
+                <label class="col-12 examinar">SUBIR IMAGÉN</label>
+                <input class="col-12 examinar" type="file" name="avatar">
+            </p>
+        </div>
+        <button class="botonAdd" type="submit">Crear producto</button>
+    </form>
+</div>
+
+</body>
+<%- include('partials/footer') %>

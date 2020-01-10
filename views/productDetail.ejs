@@ -142,7 +142,9 @@
     <p class="descripcion"> <%= productFind.descripcion %> </p>
     <button type="submit" class="btn-detail">Añadir al carrito</button>
 </form>
-<button class="btn-detail">Eliminar artículo</button>
+<form action="/productos/borrar/<%= productFind.id %>?_method=DELETE" method="POST">
+<button type="submit" class="btn-detail">Eliminar artículo</button>
+</form> 
 </div>
 </div>
 <div class="row progress-bars">

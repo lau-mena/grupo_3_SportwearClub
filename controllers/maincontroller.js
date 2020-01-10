@@ -3,6 +3,7 @@ const path = require('path');
 
 
 const productFilePath = __dirname + '/../data/products.json';
+let productsContent = fs.readFileSync(productFilePath, 'utf-8');
 
 function getProducts() {
     let productsContent = fs.readFileSync(productFilePath, 'utf-8');
@@ -129,9 +130,27 @@ let controller = {
 
     },
     deleteProduct: (req, res) => {
+            
+        let productosArray = JSON.parse(productsContent);
+            let productosSinElQueBorramos = productosArray.filter(function (unProducto) {
+                return unProducto.id != req.params.id;
+            })
+            // guardo el array con los productos finales
+            fs.writeFileSync(productFilePath, JSON.stringify(productosSinElQueBorramos, null, ' '));
+            res.redirect('/');
+        
+    },
+    editProductShow:(req,res) => {
         let productsContent = fs.readFileSync(productFilePath, 'utf-8');
         let products = getProducts();
-      
+        res.render('productEdit', {
+            products : products,
+            title : 'Edit',
+            bodyName : 'edit',
+        })
+    },
+    editProduct: (req, res) =>{
+
     },
 
     Mujer: (req, res) => {
