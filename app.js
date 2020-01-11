@@ -25,6 +25,9 @@ app.use(methodOverride('_method'));
 const mainRouter = require('./routes/main')
 app.use('/', mainRouter);
 
+const userRouter = require('./routes/users')
+app.use('/users', userRouter);
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

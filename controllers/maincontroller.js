@@ -65,16 +65,7 @@ let controller = {
         })
 
     },
-    
- 
 
-    register: (req, res) => {
-        res.render('register', {
-            title: 'Register',
-            bodyName: 'register',
-        })
-
-    },
 
     productShow: (req, res) => {
         res.render('productAdd', {
@@ -142,9 +133,11 @@ let controller = {
     },
     editProductShow:(req,res) => {
         let productsContent = fs.readFileSync(productFilePath, 'utf-8');
-        let products = getProducts();
+        let products = JSON.parse(productsContent);
+        let productId = req.params.id;
+        let productFind = products.find(producto => producto.id == productId);
         res.render('productEdit', {
-            products : products,
+            productFind : productFind,
             title : 'Edit',
             bodyName : 'edit',
         })
@@ -197,13 +190,6 @@ let controller = {
 
     },
 
-    login: (req, res) => {
-        res.render('login', {
-            title: 'Login',
-            bodyName: 'bodyLogin',
-        })
-
-    },
 
     Calzado:(req, res) => {
         let productsContent = fs.readFileSync(productFilePath, 'utf-8');

@@ -3,7 +3,7 @@
 <div class="registerBody">
    <h1 class="title-register">REGISTRATE</h1>
    <div class="registro">
-      <form action="validar.php" method="POST">
+      <form action="/users/register" method="POST" enctype="multipart/form-data">
          <div class="sub-inputs">
             <div class="row">
                <p class="form-register">
@@ -20,7 +20,7 @@
             <div class="row">
                <p class="form-register">
                   <label class="col-12 sinPadding " for="nacimiento">FECHA DE NACIMIENTO </label>
-                  <input class="col-12 date register" type="date" id="start" name="trip-start">
+                  <input class="col-12 date register" type="date" id="start" name="fecha">
                </p>
             </div>
             <div class="row">
@@ -59,6 +59,12 @@
                   <input class="col-12 register" type="password" name="pass" id="pass">
                </p>
             </div>
+            <div class="row">
+               <p class="pAdd examinar">
+                   <label class="col-12 examinar">SUBIR IMAGÉN</label>
+                   <input class="col-12 examinar" type="file" name="avatar">
+               </p>
+           </div>
             <p>
                <label class="check-register" for="cond"><input type="checkbox" name="cond" id="cond"> He leido y acepto
                   los terminos y condiciones </label>
