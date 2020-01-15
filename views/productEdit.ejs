@@ -18,28 +18,17 @@
         <div class="row">
             <p class="pAdd">
                 <label class="col-12">Descripción del producto:</label>
-                <textarea class="col-12" name="productDescription" autocomplete="<%= productFind.descripcion%>"></textarea>
+                <textarea class="col-12" name="productDescription" placeholder="<%= productFind.descripcion%>"></textarea>
             </p>
         </div>
         <div class="row">
             <p class="pAdd">
                 <label class="col-12">Color:</label>
-                <select class="col-12" name="color" select="<%= productFind.color %>">
-                    <option value="Negro">Negro</option>
-                    <option value="Blanco">Blanco</option>
-                    <option value="Gris">Gris</option>
-                    <option value="Azul">Azul</option>
-                    <option value="Verde">Verde</option>
-                    <option value="Rojo">Rojo</option>
-                    <option value="Amarillo">Amarillo</option>
-                    <option value="Naranja">Naranja</option>
-                    <option value="Bordo">Bordó</option>
-                    <option value="Rosa">Rosa</option>
-                    <option value="Celeste">Celeste</option>
-                    <option value="Natural">Natural</option>
-                    <option value="Fucsia">Fucsia</option>
-                    <option value="Lila">Lila</option>
-                    <option value="Mostaza">Mostaza</option>
+
+                <select class="col-12" name="color" >
+                   <<% colorFinal.forEach(color => { %>
+                    <option value="<%=color%>"><%=color%></option>
+                    <% }) %>
                 </select>
             </p>
         </div>

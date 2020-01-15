@@ -42,5 +42,16 @@
   "email": "pepito@outlook.com",
   "password": "$2b$10$KK2FyKoWGTTrbo3HvGgkcOI7uG9L24ItkO0W283QLI3u7cPcT/9z6",
   "avatar": "user_avatar_1578707815694.webp"
+ },
+ {
+  "id": 5,
+  "nombre": "Erik",
+  "apellido": "Lewis",
+  "fecha": "1671-07-06",
+  "pais": "AR",
+  "ciudad": "CABA",
+  "email": "erik@casaba.com",
+  "password": "$2b$10$yPu9xHx5RxIEGr.hcWfWAeRcW4iciMWEQgKxpn1GyHcxHdBIqJbiK",
+  "avatar": "user_avatar_1578845869494.jpg"
  }
 ]

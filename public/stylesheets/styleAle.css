@@ -90,6 +90,9 @@ header {
   text-align: right;
   margin: 0;
 }
+.perfil{
+margin-right: 5px;
+}
 
 .boton-search {
   background: transparent;

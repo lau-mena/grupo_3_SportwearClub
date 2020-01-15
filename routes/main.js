@@ -7,8 +7,8 @@ const path = require('path');
 
 const storageDisk = multer.diskStorage({
 	destination: (req, file, cb) => {
-        cb(null, __dirname + '/../public/images/avatars');
-        
+		cb(null, __dirname + '/../public/images/avatars');
+
 	},
 	filename: (req, file, cb) => {
 		let imageFinalName = `product_avatar_${Date.now()}${path.extname(file.originalname)}`;
@@ -16,7 +16,9 @@ const storageDisk = multer.diskStorage({
 	}
 });
 
-const upload = multer({ storage: storageDisk });
+const upload = multer({
+	storage: storageDisk
+});
 
 
 
@@ -33,7 +35,7 @@ router.get('/productCart', mainController.productCart);
 router.get('/productAdd', mainController.productShow);
 router.post('/productAdd', upload.single('avatar'), mainController.productAdd);
 router.get('/productEdit/:id', mainController.editProductShow);
-router.put('/productEdit/:id', mainController.editProduct);
+router.put('/productEdit/:id', upload.single('avatar'), mainController.editProduct);
 router.delete('/productos/borrar/:id', mainController.deleteProduct);
 router.get('/FAQ', mainController.FAQ);
 router.get('/Nosotros', mainController.Nosotros);

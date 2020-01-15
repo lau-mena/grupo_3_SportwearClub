@@ -1,0 +1,14 @@
+<%- include('partials/head') %>
+<%- include('partials/header') %>
+<div class="container" style="margin-top: 40px;">
+    <div class="row">
+        <div class="col-md-3">
+
+            <h2> Hola <%= userLogged.nombre %> </h2>
+            <img src="/images/avatarsUsers/<%= userLogged.avatar %>" width="100%">
+
+            <div class="alert alert-success"><%= userLogged.email %></div>
+        </div>
+    </div>
+</div>
+<%- include('partials/footer') %>

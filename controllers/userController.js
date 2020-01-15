@@ -51,16 +51,24 @@ function getUserById(id) {
 
 const userController = {
     register: (req, res) => {
+        const isLogged = req.session.userId ? true : false;
+		let userLogged = getUserById(req.session.userId);
         res.render('register', {
             title: 'Register',
-            bodyName: 'register',
+            bodyName: 'register', 
+            isLogged, 
+            userLogged
         })
 
     },
     login: (req, res) => {
+        const isLogged = req.session.userId ? true : false;
+		let userLogged = getUserById(req.session.userId);
         res.render('login', {
             title: 'Login',
-            bodyName: 'bodyLogin',
+            bodyName: 'bodyLogin', 
+            isLogged, 
+            userLogged
         })
 
     },
@@ -95,19 +103,46 @@ const userController = {
             // si da true, comparo la contraseña con el metodo compare de bcrypt la que recibo del formulario del login con las que se guardo en la base de datos con el form del register.
 			
 			if (bcrypt.compareSync(req.body.password, user.password)) {
-				// Redireccionamos al visitante a su perfil
-                //res.redirect(`/users/profile/${user.id}`);
-                res.send('estas en tu perfil')
+                //Asigamos el usuario que no llego a la session
+                req.session.userId = user.id;
+
+                // Preguntamos si del formulario el input checkbox de recordar mis datos es true, es decir, que esta tildado
+                if (req.body.remember) {
+                    // si lo esta entra en el if y creamos una cookie , que recibe el nombre que va a tener la cookie, el valor como segundo parametro (user.id) y la duracion como tercer parametro.
+					res.cookie('userIdCookie', user.id, { maxAge: 60000 * 60 });
+                }
+                // Redireccionamos al visitante a su perfil
+                res.redirect('/users/profile');
 			} else {
                 //En caso contrario le envìo la vista de credenciales invalidas
-				res.send('Credenciales inválidas');
-			}
+                res.send('Credenciales invalidas')
+
+                }
+			
 		} else {
             //en caso de que el mail no coincida no realiza el compare y salta a la vista de no existe un usuario registrado con ese mail
-            console.log(user)
+            
 			res.send('No hay usuarios registrados con ese email');
 		}
-	},
+    },
+    profile: (req, res) => {
+        const isLogged = req.session.userId ? true : false;
+		let userLogged = getUserById(req.session.userId);
+        res.render('profile', {
+        title: 'Profile',
+        bodyName: 'profile',
+        isLogged,
+        userLogged,
+
+    });
+    },
+    logout: (req, res) => {
+		// Destruir la session
+		req.session.destroy();
+		// Destruir la cookie
+		res.cookie('userIdCookie', null, { maxAge: -1 });
+		return res.redirect('/');
+	}
 }
 
 module.exports = userController;
