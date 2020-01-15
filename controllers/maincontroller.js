@@ -18,11 +18,14 @@ function storeProduct(newProduct) {
     fs.writeFileSync(productFilePath, JSON.stringify(allProducts, null, ' '));
 }
 
+
+
 function generateProductId() {
     let allProducts = getProducts();
     if (allProducts.length == 0) {
         return 1;
     }
+
     let lastProduct = allProducts.pop();
     return lastProduct.id + 1;
 }
@@ -119,30 +122,72 @@ let controller = {
             bodyName: 'hombre',
         })
 
+        // TODO ser cool
     },
     deleteProduct: (req, res) => {
-            
+
         let productosArray = JSON.parse(productsContent);
-            let productosSinElQueBorramos = productosArray.filter(function (unProducto) {
-                return unProducto.id != req.params.id;
-            })
-            // guardo el array con los productos finales
-            fs.writeFileSync(productFilePath, JSON.stringify(productosSinElQueBorramos, null, ' '));
-            res.redirect('/');
-        
+        let productosSinElQueBorramos = productosArray.filter(function (unProducto) {
+            return unProducto.id != req.params.id;
+        })
+        // guardo el array con los productos finales
+        fs.writeFileSync(productFilePath, JSON.stringify(productosSinElQueBorramos, null, ' '));
+        res.redirect('/');
+
     },
-    editProductShow:(req,res) => {
+    editProductShow: (req, res) => {
         let productsContent = fs.readFileSync(productFilePath, 'utf-8');
         let products = JSON.parse(productsContent);
         let productId = req.params.id;
         let productFind = products.find(producto => producto.id == productId);
+
+            let colors = [
+                "Negro", "Blanco", "Gris", "Azul", "Verde", "Rojo", "Naranja", "Bordo", "Rosa", "Celeste", "Natural", "Fucsia", "Lila", "Mostaza"
+            ]
+            let colorFound = colors.filter(color => color != productFind.color);
+            let colorSolo = colors.filter(color => color == productFind.color);
+            let colorFinal = [...colorSolo, ...colorFound]
+
+            
+        console.log(colorFinal)
+        
         res.render('productEdit', {
-            productFind : productFind,
-            title : 'Edit',
-            bodyName : 'edit',
+            productFind: productFind,
+            colorFinal: colorFinal,
+            title: 'Edit',
+            bodyName: 'edit',
         })
     },
-    editProduct: (req, res) =>{
+    editProduct: (req, res) => {
+        2
+        let products = getProducts();
+        let productId = parseInt(req.params.id); //router.put('/productEdit/:id'
+
+        //inicializo la variable a almacenar
+        let productFound;
+
+        //recorro el array
+        products.map(product => {
+
+            //pregunto si el id que recibo es igual al id del producto 
+            if (product.id === productId) {
+
+                //reasigno las propiedades del producto con lo que viene del form (req.body)
+                product.nombre = req.body.productName,
+                    product.precio = req.body.productPrice,
+                    product.descripcion = req.body.productDescription,
+                    product.categoria = req.body.category,
+                    product.tipo = req.body.type,
+                    product.color = req.body.color,
+                    product.talle = req.body.size,
+                    product.status = req.body.status,
+                    product.avatar = req.file.filename
+
+                // //asigno el valor a la variable inicializada
+            }
+            productFound = products;
+        });
+        fs.writeFileSync(productFilePath, JSON.stringify(productFound, null, ' '));
 
     },
 
@@ -183,7 +228,7 @@ let controller = {
         let productsContent = fs.readFileSync(productFilePath, 'utf-8');
         let products = getProducts();
         res.render('sale', {
-            products:  products,
+            products: products,
             title: 'Sale',
             bodyName: 'sale',
         })
@@ -191,31 +236,31 @@ let controller = {
     },
 
 
-    Calzado:(req, res) => {
+    Calzado: (req, res) => {
         let productsContent = fs.readFileSync(productFilePath, 'utf-8');
         let products = getProducts();
         res.render('calzado', {
-            products : products,
+            products: products,
             title: 'Calzado',
             bodyName: 'bodyCalzado',
         })
     },
 
-    indumentaria:(req, res) => {
+    indumentaria: (req, res) => {
         let productsContent = fs.readFileSync(productFilePath, 'utf-8');
         let products = getProducts();
         res.render('indumentaria', {
-            products : products,
+            products: products,
             title: 'Indumentaria',
             bodyName: 'bodyIndumentaria',
         })
     },
 
-    accesorios:(req, res) => {
+    accesorios: (req, res) => {
         let productsContent = fs.readFileSync(productFilePath, 'utf-8');
         let products = getProducts();
         res.render('accesorios', {
-            products : products,
+            products: products,
             title: 'Accesorios',
             bodyName: 'bodyAccesorios',
         })
