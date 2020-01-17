@@ -14,87 +14,87 @@
             <h2 class="center"> Color y talles</h2>
             <p class="center"> Color</p>
             <div class="color">
-                <% if (productFind.color == 'Blanco') { %>
+                <% if (productFind.color == '1') { %>
+                    <p class="center">
+                        <i class="far fa-circle fa-3x fa-lg"></i>
+                    </p>
+                </div>
+                <% } else if (productFind.color == '15'){%>
                 <p class="center">
-                    <i class="far fa-circle fa-3x fa-lg"></i>
+                    <i class="fas fa-circle fa-3x fa-lg"></i>
                 </p>
             </div>
-            <% } else if (productFind.color == 'Negro'){%>
+            <% } else if (productFind.color == '2'){%>
             <p class="center">
-                <i class="fas fa-circle fa-3x fa-lg"></i>
+                <i class="fas fa-circle fa-3x fa-lg gris"></i>
             </p>
         </div>
-        <% } else if (productFind.color == 'Gris'){%>
+        <% } else if (productFind.color == '3'){%>
         <p class="center">
-            <i class="fas fa-circle fa-3x fa-lg gris"></i>
+            <i class="fas fa-circle fa-3x fa-lg azul"></i>
         </p>
     </div>
-    <% } else if (productFind.color == 'Azul'){%>
+    <% } else if (productFind.color == '4'){%>
     <p class="center">
-        <i class="fas fa-circle fa-3x fa-lg azul"></i>
+        <i class="fas fa-circle fa-3x fa-lg verde"></i>
     </p>
-</div>
-<% } else if (productFind.color == 'Verde'){%>
-<p class="center">
-    <i class="fas fa-circle fa-3x fa-lg verde"></i>
-</p>
-</div>
-<% } else if (productFind.color == 'Rojo'){%>
-<p class="center">
-    <i class="fas fa-circle fa-3x fa-lg rojo"></i>
-</p>
-</div>
-<% } else if (productFind.color == 'Amarillo'){%>
-<p class="center">
-    <i class="fas fa-circle fa-3x fa-lg amarillo"></i>
-</p>
-</div>
-<% } else if (productFind.color == 'Naranja'){%>
-<p class="center">
-    <i class="fas fa-circle fa-3x fa-lg naranja"></i>
-</p>
-</div>
-<% } else if (productFind.color == 'Bordo'){%>
-<p class="center">
-    <i class="fas fa-circle fa-3x fa-lg bordo"></i>
-</p>
-</div>
-<% } else if (productFind.color == 'Rosa'){%>
-<p class="center">
-    <i class="fas fa-circle fa-3x fa-lg rosa"></i>
-</p>
-</div>
-<% } else if (productFind.color == 'Celeste'){%>
-<p class="center">
-    <i class="fas fa-circle fa-3x fa-lg celeste"></i>
-</p>
-</div>
-<% } else if (productFind.color == 'Natural'){%>
-<p class="center">
-    <i class="fas fa-circle fa-3x fa-lg natural"></i>
-</p>
-</div>
-<% } else if (productFind.color == 'Fucsia'){%>
-<p class="center">
-    <i class="fas fa-circle fa-3x fa-lg fucsia"></i>
-</p>
-</div>
-<% } else if (productFind.color == 'Lila'){%>
-<p class="center">
-    <i class="fas fa-circle fa-3x fa-lg lila"></i>
-</p>
-</div>
-<% } else if (productFind.color == 'Mostaza'){%>
-<p class="center">
-    <i class="fas fa-circle fa-3x fa-lg mostaza"></i>
-</p>
-</div>
-
-<% }   %>
+    </div>
+    <% } else if (productFind.color == '5'){%>
+    <p class="center">
+        <i class="fas fa-circle fa-3x fa-lg rojo"></i>
+    </p>
+    </div>
+    <% } else if (productFind.color == '6'){%>
+    <p class="center">
+        <i class="fas fa-circle fa-3x fa-lg amarillo"></i>
+    </p>
+    </div>
+    <% } else if (productFind.color == '7'){%>
+    <p class="center">
+        <i class="fas fa-circle fa-3x fa-lg naranja"></i>
+    </p>
+    </div>
+    <% } else if (productFind.color == '8'){%>
+    <p class="center">
+        <i class="fas fa-circle fa-3x fa-lg bordo"></i>
+    </p>
+    </div>
+    <% } else if (productFind.color == '9'){%>
+    <p class="center">
+        <i class="fas fa-circle fa-3x fa-lg rosa"></i>
+    </p>
+    </div>
+    <% } else if (productFind.color == '10'){%>
+    <p class="center">
+        <i class="fas fa-circle fa-3x fa-lg celeste"></i>
+    </p>
+    </div>
+    <% } else if (productFind.color == '11'){%>
+    <p class="center">
+        <i class="fas fa-circle fa-3x fa-lg natural"></i>
+    </p>
+    </div>
+    <% } else if (productFind.color == '12'){%>
+    <p class="center">
+        <i class="fas fa-circle fa-3x fa-lg fucsia"></i>
+    </p>
+    </div>
+    <% } else if (productFind.color == '13'){%>
+    <p class="center">
+        <i class="fas fa-circle fa-3x fa-lg lila"></i>
+    </p>
+    </div>
+    <% } else if (productFind.color == '14'){%>
+    <p class="center">
+        <i class="fas fa-circle fa-3x fa-lg mostaza"></i>
+    </p>
+    </div>
+    
+    <% }   %>
 
 <p class="center">Talles</p>
 <form action="" method="post">
-    <% if (productFind.talle  == 'S-M-L-XL') { %>
+    <% if (productFind.talle  == '1') { %>
     <div class="talleIndumentaria">
         <label>
             <div class="talle">S</div>
@@ -109,7 +109,7 @@
             <div class="talle">XL</div>
         </label><input type="radio" name="talleindumentaria" value="xl">
     </div>
-    <% } else if (productFind.talle  == '36-al-43'){%>
+    <% } else if (productFind.talle  == '2'){%>
     <div class="talleCalzado">
         <label>
             <div class="talle">36</div>
@@ -138,8 +138,9 @@
 
     </div>
     <% }   %>
-
-    <p class="descripcion"> <%= productFind.descripcion %> </p>
+    <div class="descripcion">
+    <p> <%= productFind.descripcion %> </p>
+</div>
     <button type="submit" class="btn-detail">Añadir al carrito</button>
 </form>
 <form action="/productos/borrar/<%= productFind.id %>?_method=DELETE" method="POST">

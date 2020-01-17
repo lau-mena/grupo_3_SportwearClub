@@ -484,6 +484,9 @@ button.btn-detail {
   cursor: pointer;
   width: 90%;
 }
+div.description {
+  text-align: center;
+}
 
 p.center i.gris {
   color: #ccc;

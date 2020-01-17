@@ -26,8 +26,9 @@
                 <label class="col-12">Color:</label>
 
                 <select class="col-12" name="color" >
-                   <<% colorFinal.forEach(color => { %>
-                    <option value="<%=color%>"><%=color%></option>
+                    <option value="">Seleccione un color</option>
+                   <<% colors.forEach(color => { %>
+                    <option value="<%=color.id%>" <%= productFind.color == color.id ? "selected" : "" %> /><%=color.name%></option>
                     <% }) %>
                 </select>
             </p>
@@ -36,9 +37,10 @@
             <p class="pAdd">
                 <label class="col-12">Talle:</label>
                 <select class="col-12 add" name="size">
-                    <option value="S-M-L-XL">S - M - L - XL</option>
-                    <option value="36-al-43">36 al 43</option>
-                    <option value="none">No aplica</option>
+                    <option value="">Seleccione un Talle</option>
+                   <<% sizes.forEach(size => { %>
+                    <option value="<%=size.id%>" <%= productFind.talle == size.id ? "selected" : "" %> /><%=size.name%></option>
+                    <% }) %>
                 </select>
             </p>
         </div>
@@ -46,9 +48,10 @@
             <p class="pAdd">
                 <label class="col-12">Categoria:</label>
                 <select class="col-12 add" name="category">
-                    <option value="mujer">Mujer</option>
-                    <option value="hombre">Hombre</option>
-                    <option value="nenes">Niños</option>
+                    <option value="">Seleccione Categoria</option>
+                    <<% categories.forEach(category => { %>
+                        <option value="<%=category.id%>" <%= productFind.categoria == category.id ? "selected" : "" %> /><%=category.name%></option>
+                        <% }) %>
                 </select>
             </p>
         </div>
@@ -56,9 +59,10 @@
             <p class="pAdd">
                 <label class="col-12">Tipo de producto:</label>
                 <select class="col-12 add" name="type">
-                    <option value="indumentaria">Indumentaria</option>
-                    <option value="calzado">Calzado</option>
-                    <option value="accesorios">Accesorios</option>
+                    <option value="">Seleccione el tipo:</option>
+                    <<% typesOfProducts.forEach(type=> { %>
+                        <option value="<%=type.id%>" <%= productFind.tipo == type.id ? "selected" : "" %> /><%=type.name%></option>
+                        <% }) %>
                 </select>
             </p>
         </div>
@@ -66,9 +70,11 @@
             <p class="pAdd">
                 <label class="col-12">Status:</label>
                 <select class="col-12 add" name="status">
-                    <option value="New">New</option>
-                    <option value="Sale">Sale</option>
-                    <option value="none">No aplica</option>
+                    <option value="N">Seleccione el status:</option>
+                    <<% status.forEach(state => { %>
+                        <option value="<%=state.id%>" <%= productFind.status == state.id ? "selected" : "" %> /><%=state.name%></option>
+                        <% }) %>
+                    
                 </select>
             </p>
         </div>

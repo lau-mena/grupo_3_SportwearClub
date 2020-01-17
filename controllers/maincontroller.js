@@ -72,14 +72,16 @@ let controller = {
         let productId = req.params.id;
         let productFind = products.find(producto => producto.id == productId);
         const isLogged = req.session.userId ? true : false;
-		let userLogged = getUserById(req.session.userId);
+        let userLogged = getUserById(req.session.userId);
+        const colors = require('../data/colors.json')
         res.render('productDetail', {
             
             productFind: productFind,
             title: 'Detail',
             bodyName: 'detail',
             isLogged,
-            userLogged
+            userLogged,
+            colors
         })
 
     },
@@ -184,24 +186,33 @@ let controller = {
         let productId = req.params.id;
         let productFind = products.find(producto => producto.id == productId);
 
-            let colors = [
+            /* let colors = [
                 "Negro", "Blanco", "Gris", "Azul", "Verde", "Rojo", "Naranja", "Bordo", "Rosa", "Celeste", "Natural", "Fucsia", "Lila", "Mostaza"
-            ]
-            let colorFound = colors.filter(color => color != productFind.color);
+            ] */
+            const colors = require('../data/colors.json');
+            /* let colorFound = colors.filter(color => color != productFind.color);
             let colorSolo = colors.filter(color => color == productFind.color);
-            let colorFinal = [...colorSolo, ...colorFound]
+            let colorFinal = [...colorSolo, ...colorFound] */
+            const sizes = require ('../data/sizes.json');
+            const categories = require('../data/categories.json');
+            const typesOfProducts = require('../data/typesOfProducts.json');
+            const status = require('../data/status.json');
 
             
-        console.log(colorFinal)
+      
         const isLogged = req.session.userId ? true : false;
 		let userLogged = getUserById(req.session.userId);
         res.render('productEdit', {
             productFind: productFind,
-            colorFinal: colorFinal,
             title: 'Edit',
             bodyName: 'edit',
             isLogged,
-            userLogged
+            userLogged,
+            colors,
+            sizes,
+            categories,
+            typesOfProducts,
+            status
         })
     },
     editProduct: (req, res) => {

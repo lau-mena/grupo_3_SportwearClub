@@ -4,54 +4,21 @@
   "nombre": "Alexa",
   "apellido": "Contreras",
   "fecha": "1994-06-15",
-  "pais": "AR",
+  "pais": "VZ",
   "ciudad": "CABA",
   "email": "alexaila@outlook.com",
-  "password": "$2b$10$H19uOxPsrYRkNwEtTZHaJ..IzhzC1fYsKl.LkJ3SpHh6T9rtCVSci",
-  "avatar": "user_avatar_1578704738451.webp"
+  "password": "$2b$10$XbQ49/BbZykvZQWCD6RiceBWxk2/hzD1MVE0WLyLGmwSPe3gBD2KK",
+  "avatar": "user_avatar_1579212715339.jpg"
  },
  {
   "id": 2,
-  "nombre": "Alex",
-  "apellido": "Contreras",
-  "fecha": "1991-12-07",
-  "pais": "AR",
-  "ciudad": "CABA",
-  "email": "alexcontrerasruiz@gmail.com",
-  "password": "$2b$10$B7c9ec/lHvazeDB0n5vSUOz8NGR3a7sJybcavmSvkobXkBK9llvlS",
-  "avatar": "user_avatar_1578704992483.jpg"
- },
- {
-  "id": 3,
-  "nombre": "perro",
-  "apellido": "Contreras",
-  "fecha": "3131-11-23",
-  "pais": "AR",
-  "ciudad": "CABA",
-  "email": "alexailabbb@outlook.com",
-  "password": "$2b$10$IYcNzk1GcKdnTl.G3tkU5ejwXqUEpNqjSJIYKrjK0DaxOB76it8k6",
-  "avatar": "user_avatar_1578705058185.jpg"
- },
- {
-  "id": 4,
-  "nombre": "pepito",
-  "apellido": "Contreras",
-  "fecha": "8424-02-04",
+  "nombre": "pao",
+  "apellido": "Lewis",
+  "fecha": "2622-06-23",
   "pais": "AR",
   "ciudad": "CABA",
   "email": "pepito@outlook.com",
-  "password": "$2b$10$KK2FyKoWGTTrbo3HvGgkcOI7uG9L24ItkO0W283QLI3u7cPcT/9z6",
-  "avatar": "user_avatar_1578707815694.webp"
- },
- {
-  "id": 5,
-  "nombre": "Erik",
-  "apellido": "Lewis",
-  "fecha": "1671-07-06",
-  "pais": "AR",
-  "ciudad": "CABA",
-  "email": "erik@casaba.com",
-  "password": "$2b$10$yPu9xHx5RxIEGr.hcWfWAeRcW4iciMWEQgKxpn1GyHcxHdBIqJbiK",
-  "avatar": "user_avatar_1578845869494.jpg"
+  "password": "$2b$10$VvzzApljnn8ysOw.oEBJ5.mqJd8NBP7lgQn6IifL1LOrTfQGjMdOm",
+  "avatar": "user_avatar_1579212943526.jpg"
  }
 ]
